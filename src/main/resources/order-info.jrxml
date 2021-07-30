@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="order-info" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69537f82-b266-4663-9dc5-dee389aa7897">
+	<parameter name="firstName" class="java.lang.String"/>
+	<parameter name="lastName" class="java.lang.String"/>
+	<parameter name="price" class="java.lang.String"/>
+	<parameter name="orderId" class="java.lang.String"/>
+	<parameter name="orderDate" class="java.lang.String"/>
+	<parameter name="productName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="504" splitType="Stretch">
+			<textField>
+				<reportElement x="150" y="0" width="210" height="30" uuid="bc7523d6-aeb5-4d16-83f0-129e7e030e8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Order Details"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="41" width="480" height="30" uuid="9c79250c-8625-44bc-8fe3-e15ad3b313f9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["First Name: " + $P{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="71" width="480" height="30" uuid="28093443-193a-48da-868b-fae584890204"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Last Name: " + $P{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="101" width="479" height="30" uuid="ec94ccf6-8e5b-4a98-8f20-3d709d2249c5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Product: " + $P{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="161" width="480" height="30" uuid="59552cce-4169-4f71-a3e1-b7baef6fd549"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Order Id: " + $P{orderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="192" width="480" height="30" uuid="206025c4-75e5-4d2a-92c6-b3e34cd72d51"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Order Date: " + $P{orderDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="131" width="480" height="30" uuid="db5d78d6-c943-424c-8de6-8710fbe1e344"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Product Price: " + $P{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
